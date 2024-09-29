@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" conte>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 70vw;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 100px 200px 400px 100px;
+            gap: 20px;
+            grid-template-areas:
+                "header header header header"
+                "box1 box2 box3 aside"
+                "main main main aside"
+                "footer footer footer footer"
+            ;
+        }
+
+        .item {
+            background-color: beige;
+            border: 1px solid #000;
+            padding: 20px;
+        }
+
+        .header {
+            grid-area: header;
+        }
+
+        .box1 {
+            grid-area: box1;
+        }
+
+        .box2 {
+            grid-area: box2;
+        }
+
+        .box3 {
+            grid-area: box3;
+        }
+
+        .aside {
+            grid-area: aside;
+        }
+
+        .main {
+            grid-area: main;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item header"></div>
+        <div class="item box1"></div>
+        <div class="item box2"></div>
+        <div class="item box3"></div>
+        <div class="item main"></div>
+        <div class="item aside"></div>
+        <div class="item footer"></div>
+    </div>
+</body>
+
+</html>
